@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+#bg_img,
+#bg_img1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#bg_img {
+  z-index: 1;
+}
+
+#bg_img1 {
+  z-index: 0;
+  opacity: 1;
+}
+
+#bg_text_div {
+  position: absolute;
+  z-index: 2;
+}
+
+.slidein {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+  }
+
+  to {
+    height: 140%;
+    width: 140%;
+    opacity: 0;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: white;
+}
