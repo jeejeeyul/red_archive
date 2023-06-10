@@ -17,11 +17,13 @@ btn.addEventListener("click", function () {
     i++;
     if (i == scription.length) {
       clearInterval(interval);
+      document.cookie = "level=shirts; path=/;";
     }
   }, 100);
 
   setTimeout(() => {
     text[0].textContent = "";
     sel_con.style.visibility = "visible";
+    text_box[0].style.zIndex = "-1000";
   }, 11000);
 });

@@ -1,9 +1,9 @@
 .container {
   display: flex;
-  flex-flow: row;
   height: 100%;
-  overflow: hidden;
+  width: 100%;
   justify-content: center;
+  position: relative;
 }
 
 #bg_img,
@@ -23,8 +23,15 @@
 }
 
 #bg_text_div {
+  width: 100%;
+  height: 10%;
   position: absolute;
-  z-index: 2;
+  z-index: 4;
+}
+
+#bg_text {
+  font-size: 50px;
+  color: white;
 }
 
 #blocker {
@@ -33,8 +40,26 @@
   z-index: -1000;
 }
 
+.sel_container {
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  top: 30%;
+}
+.sel {
+  width: 50%;
+  position: relative;
+}
+
+#sel1_img,
+#sel2_img {
+  width: 100%;
+}
+
 .slidein {
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-name: slidein;
 }
 
@@ -48,7 +73,7 @@
   to {
     height: 140%;
     width: 140%;
-    opacity: 0;
+    opacity: 0.5;
   }
 }
 
