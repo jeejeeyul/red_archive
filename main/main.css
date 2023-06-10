@@ -28,10 +28,12 @@ body {
 }
 
 p {
-  font-size: 40px;
   text-align: center;
+  font-size: 40px;
 }
-
+.text {
+  font-size: 40px;
+}
 #btn {
   top: 50%;
   width: 100%;
@@ -39,4 +41,32 @@ p {
   background-color: cornflowerblue;
   position: absolute;
   z-index: 2;
+}
+
+.selection {
+  width: 50%;
+  height: 40%;
+}
+
+#sel_con {
+  display: inline-flex;
+  width: 100%;
+  height: 40%;
+  position: fixed;
+  top: 50%;
+  text-align: center;
+  visibility: hidden;
+}
+
+#man {
+  background-color: chartreuse;
+}
+
+#woman {
+  background-color: darkcyan;
+}
+
+.selection > p {
+  font-size: 40px;
+  vertical-align: middle;
 }
