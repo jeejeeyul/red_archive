@@ -17,7 +17,7 @@ btn.addEventListener("click", function () {
     i++;
     if (i == scription.length) {
       clearInterval(interval);
-      document.cookie = "level=shirts; path=/;";
+      document.cookie = "shirts=shirts; path=/;";
     }
   }, 100);
 
