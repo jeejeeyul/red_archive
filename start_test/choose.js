@@ -14,16 +14,16 @@ function setCookie(name, value, exp) {
   document.cookie =
     name + "=" + value + ";expires=" + date.toUTCString() + ";path=/";
 }
-if (getCookie("casual") == undefined) {
+if (getCookie("casual") == undefined || getCookie("shirts") == "shirts") {
   setCookie("casual", 0, 1);
 }
-if (getCookie("classic") !== undefined) {
+if (getCookie("classic") !== undefined || getCookie("shirts") == "shirts") {
   setCookie("classic", 0, 1);
 }
-if (getCookie("minimal") !== undefined) {
+if (getCookie("minimal") !== undefined || getCookie("shirts") == "shirts") {
   setCookie("minimal", 0, 1);
 }
-if (getCookie("vintage") !== undefined) {
+if (getCookie("vintage") !== undefined || getCookie("shirts") == "shirts") {
   setCookie("vintage", 0, 1);
 }
 
@@ -37,6 +37,11 @@ sel1.addEventListener("click", function () {
       var randomf = Math.floor(Math.random() * 4);
       var listfIndex = listf[randomf];
       img1.src = `../images/${listfIndex}/shirts/one/${randomf + 1}.jpg`;
+      listCheck(listfIndex);
+    } else {
+      var randomf = Math.floor(Math.random() * 4);
+      var listfIndex = listf[randomf];
+      img1.src = `../images/${listfIndex}/shirts/many/${randomf + 1}.jpg`;
       listCheck(listfIndex);
     }
   }
